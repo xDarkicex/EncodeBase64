@@ -1,6 +1,6 @@
 package encoder
 
-func StringToBase64(number int) string {
+func IntToBase64(number int) string {
 	b64 := "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-"
 	base := len(b64)
 	str := ""
@@ -13,6 +13,6 @@ func StringToBase64(number int) string {
 	return str
 }
 
-func Base64ToString(base64 string) int {
+func Base64ToInt(base64 string) int {
 	return 0
 }
