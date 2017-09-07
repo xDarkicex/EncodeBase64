@@ -2,9 +2,10 @@ package encoder
 
 import "strings"
 
+var b64 = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-"
+var base = len(b64)
+
 func IntToBase64(number int) string {
-	b64 := "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-"
-	base := len(b64)
 	str := ""
 	for number > 0 {
 		r := number % base
@@ -16,10 +17,8 @@ func IntToBase64(number int) string {
 }
 
 func Base64ToInt(base64 string) int {
-	b64 := "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-"
-	base := len(b64)
-	var number = 0
-	sliced := strings.Split(b64, "")
+	number := 0
+	sliced := strings.Split(base64, "")
 	for _, v := range sliced {
 		r := strings.Index(b64, v)
 		number *= base
