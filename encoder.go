@@ -1,4 +1,4 @@
-package Encoder
+package encoder
 
 func Base64(number int) string {
 	b64 := "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-"
